@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution</title>
+</head>
+
+<link rel="stylesheet" href="nlarge_css.css">
+<script src="js1.js"></script>
+
+<body>
+
+    <h1>Text enlargement</h1>
+    <div class="container">
+        <div class="size buttons">
+            <span class="btns active" onclick="document.getElementById('text').style.fontSize = '2em'">1</span>
+            <span class="btns" onclick="document.getElementById('text').style.fontSize = '2.5em'">2</span>
+            <span class="btns" onclick="document.getElementById('text').style.fontSize = '4em'">3</span>
+        </div>
+        <div class="content" id="text">
+            <p class="text">
+                placeholder
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
+                Sed culpa dolore autem id esse tempora doloremque eligendi aut quidem accusamus laboriosam commodi voluptate odit, nobis in sequi dolor optio minus?
+            </p>
+        </div>
+        
+    </div>
+    <script>
+        let buttons = document.querySelector('.buttons');
+        let btn = buttons.querySelectorAll('.btns');
+        for (var i = 0;i<btns.length;i++){
+            let current = document.getElementsByClassName('active');
+            current[0].className = current[0].className.replace("active","");
+            this.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
